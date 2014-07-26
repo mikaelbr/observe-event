@@ -129,8 +129,6 @@ require(["observe-event"], function(eObserve) {
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
 
-[![NPM downloads][npm-downloads]][npm-url]
-
 [npm-url]: https://npmjs.org/package/observe-event
 [npm-image]: http://img.shields.io/npm/v/observe-event.svg?style=flat
 [npm-downloads]: http://img.shields.io/npm/dm/observe-event.svg?style=flat
