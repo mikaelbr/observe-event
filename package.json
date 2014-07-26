@@ -1,6 +1,6 @@
 {
   "name": "observe-event",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Make Object.observe emit events on every change",
   "main": "observe-event.js",
   "dependencies": {},
