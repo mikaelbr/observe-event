@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>eObserve example</title>
+</head>
+<body>
+
+
+  <script src="./vendors/eventemitter.js"></script>
+  <script src="../index.js"></script>
+
+  <script>
+    var myObject = {
+      "foo": "hello",
+      "bar": "world"
+    };
+    var o = eObserve(myObject)
+
+    o.on('any', function (changes) {
+        console.log("Any:", changes);
+    });
+
+    o.on('update', function (changes) {
+        console.log("Update:", changes);
+    });
+
+    myObject.foo = "Hello";
+    delete myObject.bar;
+  </script>
+</body>
+</html>
