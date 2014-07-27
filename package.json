@@ -14,7 +14,8 @@
     "gulp-rename": "^1.2.0",
     "gulp-header": "^1.0.5",
     "gulp-buffer": "0.0.2",
-    "uglify-save-license": "^0.4.1"
+    "uglify-save-license": "^0.4.1",
+    "mocha": "^1.21.1"
   },
   "scripts": {
     "test": "mocha tests.js -R spec"
