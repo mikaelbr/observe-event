@@ -1,9 +1,9 @@
 {
   "name": "observe-event",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Make Object.observe emit events on every change",
   "main": "./dist/observe-event.js",
-  "dependencies": {  },
+  "dependencies": {},
   "license": "MIT",
   "authors": [
     "Mikael Brevik <mikaelbre@gmail.com>"
