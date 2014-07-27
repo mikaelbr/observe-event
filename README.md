@@ -65,9 +65,9 @@ bower install --save observe-event
 
 ### Install manually
 
-Download [observe-event.js](./observe-event.js) and include in your HTML.
-Remember to include [EventEmitter.js](https://github.com/Wolfy87/EventEmitter)
-dependency. See [#manually-in-the-browser](for more details).
+Download [observe-event.js](./dist/observe-event.js) or
+[observe-event.min.js](./dist/observe-event.js) from the `dist` folder
+and include in your HTML. [See below for more details](#manually-in-the-browser).
 
 ## Usage
 
@@ -78,7 +78,7 @@ var eObserve = require('observe-event');
 
 var obj = { message: 'Hello World!' };
 eObserve(obj).on('update', function (change) {
-  // => change.object.message = "Hello, World!"
+  // => change.object.message = 'Hello, World!'
 });
 
 obj.message = 'Hello, World!';
@@ -89,36 +89,38 @@ See [example](./examples/node.js)
 
 ### Manually in the browser
 
-Requires [EventEmitter.js](https://github.com/Wolfy87/EventEmitter)
-
 ```html
-<script src="./vendors/eventemitter.js"></script>
-<script src="../index.js"></script>
+<script src="./dist/observe-event.js"></script>
 ```
 
 ```javascript
 
 var obj = { message: 'Hello World!' };
 eObserve(obj).on('update', function (change) {
-  // => change.object.message = "Hello, World!"
+  // => change.object.message = 'Hello, World!'
 });
 
 obj.message = 'Hello, World!';
 ```
 
-See [example](./examples/index.html)
+See [example](./examples/index.html).
 
 
 ### Using AMD (Require.js etc)
 
 **Not yet tested with AMD**
 
+Files [observe-event.js](./dist/observe-event.js) and
+[observe-event.min.js](./dist/observe-event.js) is wrapped
+with UMD (Universal Module Definition), so it should
+work with AMD as well as directly loading in the browser.
+
 ```javascript
 
-require(["observe-event"], function(eObserve) {
+require(['observe-event'], function(eObserve) {
   var obj = { message: 'Hello World!' };
   eObserve(obj).on('update', function (change) {
-    // => change.object.message = "Hello, World!"
+    // => change.object.message = 'Hello, World!'
   });
 
   obj.message = 'Hello, World!';
