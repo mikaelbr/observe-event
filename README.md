@@ -127,6 +127,13 @@ require(['observe-event'], function(eObserve) {
 });
 ```
 
+## Changelog
+
+### Version `0.7.0`
+1. Changes from having a single file with UMD in it, to use a build step creating seperate distribution files.
+2. No longer have external dependencies (EventEmitter.js).
+3. For AMD and Browser you now need to use either [observe-event.js](./dist/observe-event.js) or [observe-event.min.js](./dist/observe-event.js).
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
